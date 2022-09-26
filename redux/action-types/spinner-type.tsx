@@ -1,0 +1,4 @@
+export const ENABLE_SPINNER= "ENABLE_SPINNER";
+export const DISABLE_SPINNER= "DISABLE_SPINNER";
+
+

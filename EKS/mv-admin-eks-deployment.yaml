@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mv-admin
+  namespace: wrld3d
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mv-admin
+  template:
+    metadata:
+      labels:
+        app: mv-admin
+    spec:
+      containers:
+        - name: mv-admin
+          image: <IMAGE>
+          envFrom:
+            - configMapRef:
+                name: mv-admin-config
+          ports:
+            - containerPort: 3000

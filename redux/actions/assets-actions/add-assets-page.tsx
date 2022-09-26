@@ -1,0 +1,10 @@
+import { UPDATE_ASSETS_PAGE } from "../../action-types/assets-type";
+
+
+//Adding user information to state + local storage
+export function addAssetsPage(page:any) {
+  return {
+    type: UPDATE_ASSETS_PAGE,
+    payload: page,
+  };
+}
